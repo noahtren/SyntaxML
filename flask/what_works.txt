@@ -1,0 +1,4 @@
+reverse a list in python
+python for loop
+split a string
+python get length of a string
