@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request
 import random
 from get_data import get_json_obj
+from classify import classify
 
 app = Flask(__name__)
 
@@ -32,8 +33,14 @@ def get_nearest():
     return render_template("word2code.html", nearest=nearest_value)
 
 # LANGUAGE RECOGNITION
-@app.route('/language_recognition')
+@app.route('/language_recognition', methods=['GET'])
 def language_recognition():
     return render_template("language_recognition.html")
+
+@app.route('/language_recognition', methods=['POST'])
+def run_recognition():
+    code = request.form["entry"]
+    result = classify(code)
+    return render_template("language_recognition.html", determination=result)
 
 app.run('127.0.0.1',port=5000,debug=True)
