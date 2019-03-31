@@ -5,11 +5,13 @@ We knew we wanted to do something educational, specifically for programmers. Our
 We changed our idea when we considered that a programmer could quickly access syntax patterns at exactly the time they forget it, and this would make them a much more productive programmer. Our program pulls a code snippet from a curated database of common syntactical structures based on a natural language search. For example, searching `reverse a list` and `make a list backwards` and `make a list go the other way` returns the following code snippet in the context of Python:
 ```python
 array=[0,10,20,40]
-array=list(reverse(array))```
+array=list(reverse(array))
+```
 Another example is `make an item from a list go bye bye`, which returns the code:
 ```python
 numbers = [0,2,4,5]
-numbers.remove(2)```
+numbers.remove(2)
+```
 
 ## How we built it
 We used a lot of different technologies which ultimately resulted in a Flask server that makes use of both a custom classification algorithm and a package containing a trained model on vector representations of words, called word2vec. This model was implemented through the Gensim Python package, As it required a lot of computing power, we made use of our Google Cloud Credit and have an instance of a 16 vCPU Compute Engine Instance. This provides quick computations for a lag-free website.
