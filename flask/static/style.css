@@ -17,6 +17,7 @@ body {
 input.text_input {
     border: 1px solid gray;
     border-radius: 3px 3px 3px 3px;
+    width:200px;
     font-family: Frutiger;
     font-size:0.9em;
     height:1.8em;
@@ -113,7 +114,10 @@ a {
     border-radius: 3px 3px 3px 3px;
 }
 a.nav {
+    margin-left:20px;
     padding:10px;
+    font-size: 1.5em;
+    height:20px;
     border-radius: 6px 6px 0 0;
 }
 a:link {

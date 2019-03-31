@@ -36,4 +36,4 @@ def get_nearest():
 def language_recognition():
     return render_template("language_recognition.html")
 
-app.run('0.0.0.0',port=8080,debug=True)
+app.run('127.0.0.1',port=5000,debug=True)

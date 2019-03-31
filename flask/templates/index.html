@@ -10,20 +10,29 @@
     }</style>
     <script type="text/javascript" src="{{ url_for('static', filename='code.js') }}"></script>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    <h1><b>SyntaxML</b></h1><div class="nav">Test</div>
-<p>AI + Code Playground</p>
+    <h1><b>SyntaxML</b></h1>
+<p style="display:inline;">AI + Code Playground</p>
+<a href="/" class="nav" style="display:inline;">Home</a>
+<a href="/word2code" class="nav" style="display:inline;">word2code</a>
+<a href="/language_recognition" class="nav" style="display:inline;">Language Recognition</a>
+
 <hr>
 {% endblock %}
 {% block body %}
 <h1>Explore How Artificial Intelligence and Code Interact</h1>
 <p>Machine Learning is made possible by increasing access to valuable data and compute.
-There has <a href="http://learnbigcode.github.io/">been</a> <a href="https://sourced.tech/">a</a> 
-<a href="http://www.msrconf.org/">growing</a> <a href="https://mast-group.github.io/">interest</a> in 
-the field to explore how AI may interface with source code to either refine existing code or augment 
-the capabilities of a programmer.
-
-This webpage is a place to play with small-scale demos of programs inspired by this field of research.
-word2code uses the word2vec library to classify predetermined labeled code snippets with a natural
-language query.
+  There has <a href="http://learnbigcode.github.io/">been</a> <a href="https://sourced.tech/">a</a> 
+  <a href="http://www.msrconf.org/">growing</a> <a href="https://mast-group.github.io/">interest</a> in 
+  the field to explore how AI may interface with source code to either refine existing code or augment 
+  the capabilities of a programmer.
+  
+  This webpage is a place to play with small-scale demos of programs inspired by this field of research.
+  word2code uses the word2vec library to classify predetermined labeled code snippets with a natural
+  language query.
 </p>
+<br>
+<img src="https://www.scalar.ca/wp-content/uploads/2018/01/Google-Cloud-Logo-Lockup-MAIN-png-1.png" alt="Google Cloud" style="margin-left:50px;margin-right:50px;width:150px;height:150px;"> 
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1024px-Python-logo-notext.svg.png" alt="Python" style="margin-right:50px;max-width:100px;max-height:100px;">
+<img src="https://funthon.files.wordpress.com/2017/05/bs.png?w=1200" alt="BeautifulSoup" style="max-width:200px;max-height:200px;margin-right:40px;">
+<img src="https://cdn-images-1.medium.com/max/438/1*0G5zu7CnXdMT9pGbYUTQLQ.png" alt="Flask" style="margin-left:50px;max-width:150px;max-height:150px;">
 {% endblock %}
