@@ -6,14 +6,21 @@ model = api.load("glove-twitter-25")  # download the model and return as object 
 def find_top(query, key_list):
 # query must be a string
 # key list must be a list of strings such as "python for loop"
-    query = query.lower().split()
     min_dist = sys.maxsize; to_return = ""
     for key in key_list:
         key = key.lower().split()
-        print(query, key)
+        if "c++" in query and "c++" not in key:
+            continue
+        if "javascript" in query and "javascript" not in key:
+            continue
+        if "python" in query and "python" not in key:
+            continue
         result = model.wmdistance(query, key)
         print("Analyzing {}: Association: {}".format(key, result))
         if result < min_dist:
             min_dist = result
             to_return = key
-    return " ".join(to_return)
+    if to_return == "":
+        return None
+    else:
+        return " ".join(to_return)
