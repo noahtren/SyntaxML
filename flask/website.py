@@ -58,4 +58,4 @@ def py():
 def js():
     return codecs.open("js_data.txt","r", "utf-8").read()
 
-app.run('127.0.0.1',port=5000,debug=True)
+app.run('0.0.0.0',port=8080,debug=True)
